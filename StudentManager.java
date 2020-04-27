@@ -43,6 +43,10 @@ public class StudentManager {
 
     //insert a new student
     public void insertStuddent(){
+        if(students.size()>=20){
+            System.out.println("No more than 20 students can be inserted into the list.");
+            return;
+        }
         System.out.println("Please input the studentID to insert the student:");
         Scanner in = new Scanner(System.in);
         int studentID = in.nextInt();
