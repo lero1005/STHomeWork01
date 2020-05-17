@@ -4,7 +4,11 @@ import java.util.Date;
 /**
  * Created by lero on 2020/4/25.
  */
+/*
+#14:
 public class Student implements Comparable{
+ */
+public class Student implements Comparable {
     private int ID;
     private String name;
     private Date birDate;
@@ -52,6 +56,10 @@ public class Student implements Comparable{
         this.gender = gender;
     }
 
+    /*
+    #4:
+     */
+    //get the student's Info
     @Override
     public String toString() {
         String string = "";
@@ -63,12 +71,20 @@ public class Student implements Comparable{
         return string;
     }
 
+    /*
+    #19/#18:
+    if(this.ID>s.ID)
+        return 1;
+    else
+        return -1;
+     */
     @Override
     public int compareTo(Object o) {
         Student s = (Student)o;
-        if(this.ID>s.ID)
+        if (this.ID>s.ID) {
             return 1;
-        else
+        } else {
             return -1;
+        }
     }
 }
